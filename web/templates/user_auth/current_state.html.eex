@@ -1,0 +1,20 @@
+<h2>Show user state</h2>
+
+<ul>
+
+  <li>
+    <strong>Current usd:</strong>
+    <%= @transaction.cur_usd %>
+  </li>
+
+  <li>
+    <strong>Current eur:</strong>
+    <%= @transaction.cur_eur %>
+  </li>
+
+  <li>
+    <strong>Current gold:</strong>
+    <%= @transaction.cur_gold %>
+  </li>
+
+</ul>

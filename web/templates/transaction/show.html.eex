@@ -1,0 +1,42 @@
+<h2>Show transaction</h2>
+
+<ul>
+
+  <li>
+    <strong>Usd to eur:</strong>
+    <%= @transaction.usd_to_eur %>
+  </li>
+
+  <li>
+    <strong>Eur to usd:</strong>
+    <%= @transaction.eur_to_usd %>
+  </li>
+
+  <li>
+    <strong>Usd to gold:</strong>
+    <%= @transaction.usd_to_gold %>
+  </li>
+
+  <li>
+    <strong>Gold to usd:</strong>
+    <%= @transaction.gold_to_usd %>
+  </li>
+
+  <li>
+    <strong>Cur usd:</strong>
+    <%= @transaction.cur_usd %>
+  </li>
+
+  <li>
+    <strong>Cur eur:</strong>
+    <%= @transaction.cur_eur %>
+  </li>
+
+  <li>
+    <strong>Cur gold:</strong>
+    <%= @transaction.cur_gold %>
+  </li>
+
+</ul>
+
+<%= link "Back", to: transaction_path(@conn, :index) %>

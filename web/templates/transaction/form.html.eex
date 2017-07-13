@@ -1,0 +1,55 @@
+<%= form_for @changeset, @action, fn f -> %>
+  <%= if @changeset.action do %>
+    <div class="alert alert-danger">
+      <p>Oops, something went wrong! Please check the errors below.</p>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= label f, :cur_usd, class: "control-label" %>
+    <%= number_input f, :cur_usd, step: "any", class: "form-control", readonly: "readonly"  %>
+    <%= error_tag f, :cur_usd %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :cur_eur, class: "control-label" %>
+    <%= number_input f, :cur_eur, step: "any", class: "form-control", readonly: "readonly" %>
+    <%= error_tag f, :cur_eur %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :cur_gold, class: "control-label" %>
+    <%= number_input f, :cur_gold, step: "any", class: "form-control", readonly: "readonly" %>
+    <%= error_tag f, :cur_gold %>
+  </div>
+
+
+
+  <div class="form-group">
+    <%= label f, :usd_to_eur, class: "control-label" %>
+    <%= number_input f, :usd_to_eur, step: "any", class: "form-control" %>
+    <%= error_tag f, :usd_to_eur %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :eur_to_usd, class: "control-label" %>
+    <%= number_input f, :eur_to_usd, step: "any", class: "form-control" %>
+    <%= error_tag f, :eur_to_usd %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :usd_to_gold, class: "control-label" %>
+    <%= number_input f, :usd_to_gold, step: "any", class: "form-control" %>
+    <%= error_tag f, :usd_to_gold %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :gold_to_usd, class: "control-label" %>
+    <%= number_input f, :gold_to_usd, step: "any", class: "form-control" %>
+    <%= error_tag f, :gold_to_usd %>
+  </div>
+
+  <div class="form-group">
+    <%= submit "Submit", class: "btn btn-primary" %>
+  </div>
+<% end %>

@@ -1,0 +1,12 @@
+{application,finance,
+             [{applications,[kernel,stdlib,elixir,logger]},
+              {description,"finance"},
+              {modules,['Elixir.Finance.Application',
+                        'Elixir.Finance.DataCacher',
+                        'Elixir.Finance.DataFetchDataSupervisor',
+                        'Elixir.Finance.GoldToUsd','Elixir.Finance.UsdToEuro',
+                        'Elixir.Finance.YahooParser']},
+              {registered,[]},
+              {vsn,"0.1.0"},
+              {extra_applications,[logger]},
+              {mod,{'Elixir.Finance.Application',[]}}]}.

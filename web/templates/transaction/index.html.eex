@@ -1,0 +1,36 @@
+<h2>Listing transactions</h2>
+
+<%= link "New transaction", to: transaction_path(@conn, :new) %>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Usd to eur</th>
+      <th>Eur to usd</th>
+      <th>Usd to gold</th>
+      <th>Gold to usd</th>
+      <th>Cur usd</th>
+      <th>Cur eur</th>
+      <th>Cur gold</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for transaction <- @transactions do %>
+    <tr>
+      <td><%= transaction.usd_to_eur %></td>
+      <td><%= transaction.eur_to_usd %></td>
+      <td><%= transaction.usd_to_gold %></td>
+      <td><%= transaction.gold_to_usd %></td>
+      <td><%= transaction.cur_usd %></td>
+      <td><%= transaction.cur_eur %></td>
+      <td><%= transaction.cur_gold %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: transaction_path(@conn, :show, transaction), class: "btn btn-default btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>

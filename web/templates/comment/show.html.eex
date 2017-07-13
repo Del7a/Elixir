@@ -1,0 +1,14 @@
+<h2>Show comment</h2>
+
+<ul>
+
+  <li>
+    <strong>Body:</strong>
+    <%= @comment.body %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: comment_path(@conn, :edit, @comment) %>
+<br/>
+<%= link "Back", to: comment_path(@conn, :index) %>

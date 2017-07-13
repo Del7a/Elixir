@@ -1,2 +1,2 @@
 # Elixir
-Elixir FMI Course
+ESample Hello Phoenix project
