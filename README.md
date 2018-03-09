@@ -1,2 +1,2 @@
 # Elixir
-Sample Hello Phoenix project
+A Phoenix based project
